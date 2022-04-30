@@ -33,7 +33,7 @@
             }
             .register{
                 /*background: -webkit-linear-gradient(left, #055a4f, #00c6ff);*/
-                background: blue;
+                background: red;
                 margin-top: 3%;
                 padding: 3%;
                 border-radius: 2.5rem;
@@ -87,16 +87,16 @@
           <script>
             const scriptURL = 'https://script.google.com/macros/s/AKfycbwk2Jy0Fo66RpAa2oWdtmx3CAhoO2i0RC4z4IgfCrB1_FNgx5e6/exec'
             const form = document.forms['google-sheet']
-            var delayInMilliseconds = 1000; //1 second
+            var delayInMilliseconds = 3000; //1 second
           
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
                 .catch(error => console.error('Error!', error.message))
-             setTimeout(function() {
-  document.getElementById("myForm").reset();
-}, delayInMilliseconds);
+                setTimeout(function() {
+                document.getElementById("myForm").reset();
+                }, delayInMilliseconds);
             })
               
        
