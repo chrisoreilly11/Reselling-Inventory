@@ -33,7 +33,7 @@
             }
             .register{
                 /*background: -webkit-linear-gradient(left, #055a4f, #00c6ff);*/
-                background: blue;
+                background: red;
                 margin-top: 3%;
                 padding: 3%;
                 border-radius: 2.5rem;
@@ -94,10 +94,14 @@
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
                 .catch(error => console.error('Error!', error.message))
-             document.getElementById("myForm").reset();
+             
             })
               
-              
+            var delayInMilliseconds = 1000; //1 second
+
+setTimeout(function() {
+  document.getElementById("myForm").reset();
+}, delayInMilliseconds);  
 
      
           </script>
