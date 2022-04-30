@@ -87,22 +87,19 @@
           <script>
             const scriptURL = 'https://script.google.com/macros/s/AKfycbwk2Jy0Fo66RpAa2oWdtmx3CAhoO2i0RC4z4IgfCrB1_FNgx5e6/exec'
             const form = document.forms['google-sheet']
-            
+            var delayInMilliseconds = 1000; //1 second
           
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
                 .catch(error => console.error('Error!', error.message))
-             
+             setTimeout(function() {
+  document.getElementById("myForm").reset();
+}, delayInMilliseconds);
             })
               
-            var delayInMilliseconds = 1000; //1 second
-
-setTimeout(function() {
-  document.getElementById("myForm").reset();
-}, delayInMilliseconds);  
-
+       
      
           </script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
