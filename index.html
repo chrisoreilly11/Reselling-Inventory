@@ -33,7 +33,7 @@
             }
             .register{
                 /*background: -webkit-linear-gradient(left, #055a4f, #00c6ff);*/
-                background: yellow;
+                background: red;
                 margin-top: 3%;
                 padding: 3%;
                 border-radius: 2.5rem;
@@ -65,21 +65,34 @@
                                 <div class="col-md-12">
                                     <form id="myForm" method="post" autocomplete="off" name="google-sheet">
                                         <div class="form-group">
-                                            <input type="text" name="Product Description" class="form-control" placeholder="Product Description *" value="" required=""/>
+                                            <input type="text" name="Item Description" class="form-control" placeholder="Product Description" value="" required=""/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="number" name="Cost" class="form-control" placeholder="Cost *" value="" required=""/>
+                                            <input type="number" name="Cost" class="form-control" placeholder="Cost" value="" required=""/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="Email" class="form-control" placeholder="Your Email *" value="" required=""/>
+                                            <input type="text" name="Category" class="form-control" placeholder="Category" value="" required=""/>
                                         </div>
-                                        <div class="form-group">
-                                            <input type="number" name="Phone" class="form-control" placeholder="Your Contact Number *" value="" required=""/>
+                                         <div class="form-group">
+                                            <input type="text" name="Location Listed" class="form-control" placeholder="Location bought" value="" required=""/>
                                         </div>
+                                        
                                         <div class="form-group">
                                             <input type="text" name="Location bought" class="form-control" placeholder="Location bought" value="" required=""/>
                                         </div>
-                                       
+                                       <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Choose an Animal Class:</label>
+                                          <div class="mb-3">
+                                            <select id="inputState" class="form-select">
+                                              <option selected>Choose...</option>
+                                              <option value="queensland">Birds</option>
+                                              <option value="newsouthwales">Mammals</option>
+                                              <option value="westernaustralia">Arthropods</option>
+                                              <option value="northernterritory">Reptiles</option>
+                                              <option value="tasmania">Amphibian</option>
+                                              <option value="southaustralia">Fish</option>
+                                            </select>
+                                       </div>
                                         <div class="form-group">
                                             <input type="submit" name="submit" class="btnSubmit btn-block" value="Login" />
                                         </div>
